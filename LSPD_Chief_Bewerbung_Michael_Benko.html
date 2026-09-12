@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LSPD — Bewerbung als Chief of Police | Michael Benko</title>
+<meta name="description" content="Interne Bewerbung von Michael Benko zum Chief of Police des Los Santos Police Department.">
+<style>
+:root{
+  --bg:#070b12;--panel:#0d131d;--panel2:#111a27;--line:#223044;
+  --text:#edf3fb;--muted:#8d9caf;--accent:#4d8dff;--accent2:#76a9ff;
+  --good:#63d69b;--danger:#ef7777;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:radial-gradient(circle at 50% -10%,#17253b 0,transparent 35%),var(--bg);
+  color:var(--text);line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:20;background:rgba(7,11,18,.86);
+  backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)
+}
+.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:.08em;font-size:14px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:24px;color:var(--muted);font-size:13px}
+.nav-links a:hover{color:white}
+.hero{padding:105px 0 80px;min-height:650px;display:flex;align-items:center}
+.kicker{color:var(--accent2);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(48px,8vw,88px);line-height:.94;letter-spacing:-.055em;max-width:900px}
+h1 span{color:var(--accent)}
+.hero-sub{max-width:760px;color:var(--muted);font-size:18px;margin:28px 0 36px}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.meta-card,.card{
+  background:linear-gradient(145deg,rgba(17,26,39,.94),rgba(10,15,24,.94));
+  border:1px solid var(--line);border-radius:16px;
+}
+.meta-card{padding:18px}
+.label{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:800}
+.value{font-size:16px;font-weight:800;margin-top:5px}
+section{padding:82px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+.eyebrow{color:var(--accent);font-weight:900;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+h2{font-size:38px;letter-spacing:-.035em;line-height:1.05;margin-top:8px}
+.section-desc{max-width:540px;color:var(--muted);font-size:14px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{padding:26px}
+.card h3{font-size:19px;margin-bottom:9px}
+.card p{color:var(--muted);font-size:14px}
+.profile{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.experience{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:20px}
+.exp{padding:13px 15px;border:1px solid var(--line);border-radius:11px;background:#0a111b;font-size:13px}
+.exp strong{float:right;color:var(--accent2)}
+.quote{border-left:3px solid var(--accent);padding:20px 24px;background:#0b121d;border-radius:0 14px 14px 0;color:#c9d5e5}
+.number{font-size:13px;color:var(--accent2);font-weight:900;letter-spacing:.1em}
+.feature{min-height:190px}
+.ranks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rank{
+  display:flex;align-items:center;gap:13px;padding:13px 15px;background:#0b111a;
+  border:1px solid var(--line);border-radius:11px
+}
+.rank-num{font-weight:950;color:var(--accent2);width:28px}
+.rank-name{font-size:13px;font-weight:750}
+.rank-group{margin:30px 0 12px;color:#fff;font-weight:900;font-size:14px;letter-spacing:.04em}
+.dept{display:flex;gap:17px}
+.dept-icon{width:42px;height:42px;flex:none;border-radius:11px;background:#17243a;display:grid;place-items:center;color:var(--accent2);font-weight:900}
+.steps{display:grid;gap:12px}
+.step{display:grid;grid-template-columns:50px 1fr;gap:16px;align-items:start}
+.step-no{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--accent2);font-weight:900}
+.step h3{font-size:16px}
+.step p{color:var(--muted);font-size:14px;margin-top:3px}
+.goal{font-size:25px;line-height:1.45;max-width:850px}
+footer{border-top:1px solid var(--line);padding:35px 0 50px;color:var(--muted);font-size:12px}
+.signature{margin-top:30px;font-size:20px;color:white;font-weight:800}
+.badge{display:inline-block;border:1px solid #2d4770;background:#0e1a2c;color:#9bbcff;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:800}
+ul{padding-left:18px;color:var(--muted);font-size:14px}
+li{margin:6px 0}
+@media(max-width:850px){
+  .nav-links{display:none}.meta{grid-template-columns:1fr 1fr}
+  .profile,.grid-2,.grid-3{grid-template-columns:1fr}
+  .ranks{grid-template-columns:1fr 1fr}
+  section{padding:62px 0}.hero{padding:80px 0 60px}
+}
+@media(max-width:520px){
+  .meta,.ranks,.experience{grid-template-columns:1fr}
+  h1{font-size:52px}.hero-sub{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#top">LSPD <span>// INTERNAL</span></a>
+    <div class="nav-links">
+      <a href="#vorstellung">Vorstellung</a>
+      <a href="#warum">Warum Chief?</a>
+      <a href="#rp">RP</a>
+      <a href="#struktur">Struktur</a>
+      <a href="#bewerbung">Verfahren</a>
+      <a href="#ziel">Ziel</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <div class="kicker">Los Santos Police Department // Interne Bewerbung</div>
+    <h1>Bewerbung als<br><span>Chief of Police</span></h1>
+    <p class="hero-sub">Vorgelegt von <strong>Officer Michael Benko</strong> — mit dem Ziel, das LSPD als verlässliche, disziplinierte und bürgernahe Institution von Los Santos zu führen.</p>
+    <div class="meta">
+      <div class="meta-card"><div class="label">IC Name</div><div class="value">Michael Benko</div></div>
+      <div class="meta-card"><div class="label">Aktueller Rang</div><div class="value">#25</div></div>
+      <div class="meta-card"><div class="label">Abteilung</div><div class="value">Human Resources</div></div>
+      <div class="meta-card"><div class="label">Dienstzeit</div><div class="value">1 Monat</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="vorstellung">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">01 // Vorstellung</div><h2>Wer ich bin</h2></div>
+    <p class="section-desc">Kurz und direkt: meine aktuelle Position, meine Erfahrung und der Grund, warum ich Verantwortung übernehmen möchte.</p>
+  </div>
+  <div class="profile">
+    <div class="card">
+      <span class="badge">HR — Vize</span>
+      <h3 style="margin-top:15px">Michael Benko</h3>
+      <p>Derzeit als <strong>Vize der HR-Abteilung</strong> im LSPD tätig. Ich habe Bewerbungsphasen geleitet, Orgawechsel bearbeitet und Ranganpassungen für Kollegen durchgeführt.</p>
+      <div class="experience">
+        <div class="exp">National Guard <strong>#16</strong></div>
+        <div class="exp">USSS <strong>#12</strong></div>
+        <div class="exp">SAHP <strong>#27</strong></div>
+        <div class="exp">LSPD <strong>#25</strong></div>
+        <div class="exp">EMS <strong>#12</strong></div>
+        <div class="exp">FIB <strong>#8</strong></div>
+        <div class="exp">Los Santos Vagos — Vize <strong>3×</strong></div>
+        <div class="exp">The Ballas <strong>#10</strong></div>
+        <div class="exp">Marabunta Grande <strong>#10</strong></div>
+        <div class="exp">Bloods <strong>#10</strong></div>
+        <div class="exp">Grove Street Families <strong>#10</strong></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Was ich mitbringe</h3>
+      <p>Ein Monat im LSPD ist kurz. Meine Führungserfahrung beginnt jedoch nicht bei null. In anderen staatlichen Organisationen habe ich bereits Verantwortung übernommen und gelernt, auch unter Druck ruhig und strukturiert zu handeln.</p>
+      <div class="quote" style="margin-top:22px">„Aus einzelnen Officern wird erst durch klare Strukturen, faire Führung und gemeinsame Ziele ein funktionierendes Department.“</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="warum">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">02 // Motivation</div><h2>Warum ich Chief werden will</h2></div>
+  </div>
+  <div class="grid-2">
+    <div class="card"><h3>Führung statt nur Position</h3><p>Ich bewerbe mich bewusst trotz meiner kurzen LSPD-Dienstzeit. Potenzial sollte nicht ausschließlich an Dienstmonaten gemessen werden, sondern daran, welche Verantwortung jemand bereits übernommen und wie er sie umgesetzt hat.</p></div>
+    <div class="card"><h3>Erfahrung aus mehreren Behörden</h3><p>Rang 27 bei der SAHP, Rang 16 bei der Nationalen Garde und Rang 12 bei der USSS haben mir gezeigt, wie man Teams führt, Mitarbeiter ausbildet und auch in stressigen Situationen einen kühlen Kopf bewahrt.</p></div>
+    <div class="card"><h3>Bereits Verantwortung im LSPD</h3><p>Als HR-Vize habe ich Bewerbungsphasen geleitet, Orgawechsel abgewickelt und Ranganpassungen korrekt und fair umgesetzt.</p></div>
+    <div class="card"><h3>Mein Anspruch</h3><p>Ein LSPD, das intern strukturiert arbeitet und nach außen präsent, professionell und vertrauenswürdig auftritt.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="rp">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">03 // Roleplay</div><h2>Vorschläge zur Verbesserung des LSPD-RP</h2></div>
+  </div>
+  <div class="grid-3">
+    <div class="card feature"><div class="number">01</div><h3>Strukturierte HR-Prozesse</h3><p>Bewerbungsphasen, Orgawechsel und Ranganpassungen nach einheitlichen Abläufen bearbeiten. Entscheidungen bleiben nachvollziehbar und Beschwerden über Bevorzugung werden reduziert.</p></div>
+    <div class="card feature"><div class="number">02</div><h3>Regelmäßige Trainings</h3><p>Wöchentliche Einheiten für Streifenverhalten, Festnahme-RP und Funkdisziplin — angepasst an den Rang und Erfahrungsstand.</p></div>
+    <div class="card feature"><div class="number">03</div><h3>Behördenübergreifendes RP</h3><p>Gemeinsame Einsätze und Absprachen mit EMS, FIB, SAHP und Nationaler Garde bei größeren Lagen.</p></div>
+    <div class="card feature"><div class="number">04</div><h3>Sichtbare Präsenz</h3><p>Mehr aktive Streifen in belebten Bereichen, damit das LSPD für Bürger präsent und ansprechbar ist.</p></div>
+    <div class="card feature"><div class="number">05</div><h3>Klare IA-Beschwerden</h3><p>Fehlverhalten schnell, diskret und konsequent über Internal Affairs bearbeiten — mit klaren Abläufen und Fristen.</p></div>
+    <div class="card feature"><div class="number">06</div><h3>Was zeichnet mich aus?</h3><p>Organisationstalent, Führungserfahrung, Fairness und die Bereitschaft, internes Wissen schnell aufzubauen und mich weiterzuentwickeln.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="struktur">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">04 // Organisation</div><h2>Rangsystem & Abteilungen</h2></div>
+    <p class="section-desc">Klare Zuständigkeiten und ein nachvollziehbarer Aufbau vom Rookie bis zur Leaderschaft.</p>
+  </div>
+
+  <div class="card">
+    <div class="rank-group">LEADERSCHAFT</div>
+    <div class="ranks">
+      <div class="rank"><span class="rank-num">30</span><span class="rank-name">Chief of Police</span></div>
+      <div class="rank"><span class="rank-num">29</span><span class="rank-name">Deputy Chief of Police</span></div>
+      <div class="rank"><span class="rank-num">28</span><span class="rank-name">Ass. Chief of Police</span></div>
+    </div>
+    <div class="rank-group">ABTEILUNGSLEITUNG</div>
+    <div class="ranks">
+      <div class="rank"><span class="rank-num">27</span><span class="rank-name">Curator of Department</span></div>
+      <div class="rank"><span class="rank-num">26</span><span class="rank-name">Chief of Department</span></div>
+      <div class="rank"><span class="rank-num">25</span><span class="rank-name">Deputy Chief of Department</span></div>
+    </div>
+    <div class="rank-group">HIGH COMMAND</div>
+    <div class="ranks">
+      <div class="rank"><span class="rank-num">24</span><span class="rank-name">Police Lieutenant</span></div>
+      <div class="rank"><span class="rank-num">23</span><span class="rank-name">Police Commander</span></div>
+      <div class="rank"><span class="rank-num">22</span><span class="rank-name">Police Captain</span></div>
+    </div>
+    <div class="rank-group">MEDIA DEPARTMENT</div>
+    <div class="ranks">
+      <div class="rank"><span class="rank-num">21</span><span class="rank-name">Special Police Officer</span></div>
+      <div class="rank"><span class="rank-num">20</span><span class="rank-name">HR Manager</span></div>
+      <div class="rank"><span class="rank-num">19</span><span class="rank-name">S.W.A.T. Captain</span></div>
+      <div class="rank"><span class="rank-num">18</span><span class="rank-name">Press Officer</span></div>
+    </div>
+    <div class="rank-group">COMMAND</div>
+    <div class="ranks">
+      <div class="rank"><span class="rank-num">17</span><span class="rank-name">Inspector</span></div>
+      <div class="rank"><span class="rank-num">16</span><span class="rank-name">Detective</span></div>
+      <div class="rank"><span class="rank-num">15</span><span class="rank-name">Senior Sergeant</span></div>
+      <div class="rank"><span class="rank-num">14</span><span class="rank-name">Sergeant</span></div>
+      <div class="rank"><span class="rank-num">13</span><span class="rank-name">Junior Sergeant</span></div>
+      <div class="rank"><span class="rank-num">12</span><span class="rank-name">Senior Corporal</span></div>
+      <div class="rank"><span class="rank-num">11</span><span class="rank-name">Corporal</span></div>
+    </div>
+    <div class="rank-group">OFFICER</div>
+    <div class="ranks">
+      <div class="rank"><span class="rank-num">10</span><span class="rank-name">Supervising Officer</span></div>
+      <div class="rank"><span class="rank-num">09</span><span class="rank-name">Instructing Officer</span></div>
+      <div class="rank"><span class="rank-num">08</span><span class="rank-name">Officer First Class</span></div>
+      <div class="rank"><span class="rank-num">07</span><span class="rank-name">Senior Officer</span></div>
+      <div class="rank"><span class="rank-num">06</span><span class="rank-name">Officer II</span></div>
+      <div class="rank"><span class="rank-num">05</span><span class="rank-name">Officer I</span></div>
+      <div class="rank"><span class="rank-num">04</span><span class="rank-name">Rookie</span></div>
+    </div>
+    <div class="rank-group">TOW & SONSTIGE</div>
+    <div class="ranks">
+      <div class="rank"><span class="rank-num">03</span><span class="rank-name">Traffic Officer</span></div>
+      <div class="rank"><span class="rank-num">02</span><span class="rank-name">Facility Manager</span></div>
+      <div class="rank"><span class="rank-num">01</span><span class="rank-name">Suspended — Strafrang</span></div>
+    </div>
+  </div>
+
+  <div style="height:28px"></div>
+  <div class="grid-2">
+    <div class="card dept"><div class="dept-icon">HR</div><div><h3>Human Resources</h3><p>Ranganpassungen, Bewerbungsphasen und Orgawechsel.</p></div></div>
+    <div class="card dept"><div class="dept-icon">IA</div><div><h3>Internal Affairs</h3><p>Interne Angelegenheiten und Ahndung von Fehlverhalten.</p></div></div>
+    <div class="card dept"><div class="dept-icon">SW</div><div><h3>S.W.A.T.</h3><p>Risikoreiche Einsätze, wöchentliche Checkpoints und Ghettostreifen.</p></div></div>
+    <div class="card dept"><div class="dept-icon">TD</div><div><h3>Training Department</h3><p>Ausbildung neuer und bestehender Mitarbeiter.</p></div></div>
+    <div class="card dept"><div class="dept-icon">TF</div><div><h3>Task Force</h3><p>Informationsbeschaffung und Dokumentation krimineller Aktivitäten.</p></div></div>
+    <div class="card dept"><div class="dept-icon">TOW</div><div><h3>Traffic / Take off Weight</h3><p>Straßen freihalten sowie Falschparker und Geschwindigkeitsverstöße ahnden.</p></div></div>
+    <div class="card dept"><div class="dept-icon">PR</div><div><h3>Public Relations</h3><p>Events und der community-nahe Teil des LSPD.</p></div></div>
+  </div>
+</div>
+</section>
+
+<section id="bewerbung">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">05 // Verfahren</div><h2>Bewerbung & Wiedereinstellung</h2></div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Bewerbungsvoraussetzungen</h3>
+      <ul>
+        <li>Visum mindestens 10 (TOW: mindestens 5)</li>
+        <li>Geistige Reife von 15 Jahren</li>
+        <li>Gültiger Waffen- und Führerschein</li>
+        <li>Rucksack Level 3</li>
+        <li>Strafreiheit / saubere Akte</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Wiedereinstellung</h3>
+      <p>In den ersten zwei Wochen nach einer LSPD-Neueröffnung erhalten ehemalige Mitarbeiter die Möglichkeit einer einfachen Wiedereinstellung. Abteilungsleitungen und Teile der Leaderschaft können neu besetzt werden.</p>
+      <p style="margin-top:12px">Nach Ablauf der zwei Wochen bleibt die Rückkehr über einen Wiedereinstellungstest möglich.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Bewerbungsverfahren</h3>
+    <div class="steps" style="margin-top:22px">
+      <div class="step"><div class="step-no">01</div><div><h3>Offene Bewerbungsphase</h3><p>Einmal wöchentlich können Bürger über ein Bewerbungsgespräch mit der HR ins LSPD aufgenommen werden.</p></div></div>
+      <div class="step"><div class="step-no">02</div><div><h3>Bewerbertest</h3><p>Außerhalb der offenen Phase kann bei verfügbarer HR ein Bewerbertest absolviert werden.</p></div></div>
+      <div class="step"><div class="step-no">03</div><div><h3>Mündliches Gespräch</h3><p>Nach bestandenem Test folgt ein persönliches Gespräch. Bei entsprechender Eignung erfolgt die Einstellung.</p></div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="ziel">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">06 // Ziel</div><h2>Mein Ziel</h2></div>
+  </div>
+  <div class="card">
+    <p class="goal">Ich will ein Department aufbauen, in dem jeder einzelne Officer geschätzt wird, klare Regeln verlässlich funktionieren und das Rollenspiel eine Qualität erreicht, auf die wir alle stolz sein können.</p>
+    <div class="quote" style="margin-top:30px">Das LSPD soll mehr sein als nur eine Fraktion — es soll eine Institution werden, der die Bürger von Los Santos vertrauen. Professionell, gerecht und jederzeit engagiert für das Wohl der Stadt.</div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="card" style="text-align:center;padding:55px 30px">
+    <div class="eyebrow">07 // Schlusswort</div>
+    <h2>Vielen Dank.</h2>
+    <p style="max-width:760px;margin:20px auto;color:var(--muted)">Ich bedanke mich für die Zeit, die in das Lesen dieser Bewerbung investiert wurde. Mir ist bewusst, dass meine Dienstzeit im LSPD kurz ist — ich bin aber überzeugt, dass meine bisherige Führungserfahrung und meine Arbeit als HR-Vize zeigen, dass ich bereit bin, Verantwortung für das gesamte Department zu übernehmen. Ich freue mich auf die Möglichkeit, das in einem persönlichen Gespräch zu vertiefen.</p>
+    <div class="signature">Michael Benko</div>
+    <div class="label" style="margin-top:7px">RANG #25 · HR-VIZE · BEWERBUNG ALS CHIEF OF POLICE</div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    LSPD INTERNAL // BEWERBUNG MICHAEL BENKO // 2026
+  </div>
+</footer>
+</body>
+</html>
